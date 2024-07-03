@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel" thread-count="4" parallel="tests" >
+
+    <test name="ReceiveParts">
+        <parameter name="receivepartsEU" value="1"></parameter>
+        <parameter name=" String appUrl " value="https://daf.perfitcomputer.com/kona_eu/faces/index.jsf"></parameter>
+        <parameter name="environment" value="EU"/>
+        <parameter name="config" value="receivepartsEU.properties"/>
+        <classes>
+            <class name="tests.parts.ReceiveParts"/>
+        </classes>
+    </test>
+
+    <test name="Spotorderparts">
+        <parameter name="spotorderpartsEU" value="2"></parameter>
+        <parameter name=" String appUrl " value="https://daf.perfitcomputer.com/kona_eu/faces/index.jsf"></parameter>
+        <parameter name="environment" value="EU"/>
+        <parameter name="config" value="spotorderpartsEU.properties"/>
+        <classes>
+            <class name="tests.parts.Spotorderparts"/>
+        </classes>
+    </test>
+
+    <test name="Addafabricatedparttoaclosedworkorder">
+        <parameter name="AddafabricatedparttoaclosedworkorderEU" value="3"></parameter>
+        <parameter name=" String appUrl " value="https://daf.perfitcomputer.com/kona_eu/faces/index.jsf"></parameter>
+        <parameter name="config" value="AddafabricatedparttoaclosedworkorderEU.properties"/>
+        <parameter name="environment" value="EU"/>
+        <classes>
+            <class name="tests.parts.Addafabricatedparttoaclosedworkorder"/>
+        </classes>
+    </test>
+
+    <test name="CreatePart">
+        <parameter name="createpartEU" value="4"></parameter>
+        <parameter name=" String appUrl " value="https://daf.perfitcomputer.com/kona_eu/faces/index.jsf"></parameter>
+        <parameter name="config" value="createpartEU.properties"/>
+        <parameter name="environment" value="EU"/>
+        <classes>
+            <class name="tests.parts.CreatePart"/>
+        </classes>
+    </test>
+
+</suite>
