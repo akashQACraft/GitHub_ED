@@ -37,6 +37,8 @@ import pages.tech.EC_Tech_WoParts;
 
 
 import pages.ticket.*;
+import pages.ticket_august.*;
+import pages.ticket_july.*;
 import tests.ticket.hideshopsuppliesonwoinvoiceparameternotworking;
 import utils.TestListener;
 
@@ -111,8 +113,26 @@ public class TestDriverActions {
    public FixedPMRegularReadingbasedPMSchedules fixedpm;
    public  PartResequencing partresequesencing;
    public TheServiceBoardrefreshesandlosestheusersposition workrequiredpopup;
-
    public  LabelExceptionError caledon;
+   public PMInspectionReading  agtfleet;
+   public RentalEquipmentUtilizationParameternotworking triton;
+   public QuantumFinancialExportIsShowingaPSTvalueForInvoices financialexport;
+   public  TheGLAccountHistoryexportcaps theglaccounthistory;
+   public DeleteBackordersUNITED deletebackorders;
+   public ShowTechnicianParameternotworking showtechnicianparameterworking;
+   public DispatchGLMappingExceptionError dispatchglmapping;
+   public ConvertNonDedicatedreportstofullXLSXformat convertnondeticatedreports;
+   public GLAccountHistoryScreentoincludeBillingLocation glaccounthistoryscrren;
+   public BackOrderLoadingTime backorderloadingtime;
+   public HistorylinkunderThingstoDobreakstheCounterSaleManagerTaskflow historylinksunderthings;
+   public UnitReadingreportisntfilteringbycustomer unitreadingreport;
+   public AddtheoptiontoexcludedefectlabourlinesontheFleet addtheoptiontoexcludedefectlabourlines;
+   public WorkinProgressReportLocationParameterGIST workinprogressreportlocation;
+   public PartUsageExportInvestigationWALLER partusageexportinvestion;
+   public FinanceLeaseInvoicesarenotshowingthecorrectinvoicedateBENLEA financeLeaseInvoice;
+
+
+
 
 
 
@@ -247,7 +267,7 @@ public class TestDriverActions {
             options.setExperimentalOption("prefs",chromePrefs);
             WebDriverManager.chromedriver().setup();
             options.addArguments("--start-maximized");
-          //  options.addArguments("--headless=new");
+        //    options.addArguments("--headless=new");
             options.addArguments("--window-size=1366,768");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-popup-blocking");
@@ -336,7 +356,22 @@ public class TestDriverActions {
         partresequesencing=PageFactory.initElements(driver,PartResequencing.class);
         workrequiredpopup=PageFactory.initElements(driver,TheServiceBoardrefreshesandlosestheusersposition.class);
         caledon=PageFactory.initElements(driver,LabelExceptionError.class);
-
+        agtfleet=PageFactory.initElements(driver,PMInspectionReading.class);
+        triton=PageFactory.initElements(driver,RentalEquipmentUtilizationParameternotworking.class);
+        financialexport=PageFactory.initElements(driver,QuantumFinancialExportIsShowingaPSTvalueForInvoices.class);
+        theglaccounthistory=PageFactory.initElements(driver,TheGLAccountHistoryexportcaps.class);
+        deletebackorders=PageFactory.initElements(driver,DeleteBackordersUNITED.class);
+        showtechnicianparameterworking=PageFactory.initElements(driver,ShowTechnicianParameternotworking.class);
+        dispatchglmapping=PageFactory.initElements(driver,DispatchGLMappingExceptionError.class);
+        convertnondeticatedreports=PageFactory.initElements(driver,ConvertNonDedicatedreportstofullXLSXformat.class);
+        glaccounthistoryscrren=PageFactory.initElements(driver,GLAccountHistoryScreentoincludeBillingLocation.class);
+        backorderloadingtime=PageFactory.initElements(driver,BackOrderLoadingTime.class);
+        historylinksunderthings=PageFactory.initElements(driver, HistorylinkunderThingstoDobreakstheCounterSaleManagerTaskflow.class);
+        unitreadingreport=PageFactory.initElements(driver,UnitReadingreportisntfilteringbycustomer.class);
+        addtheoptiontoexcludedefectlabourlines=PageFactory.initElements(driver,AddtheoptiontoexcludedefectlabourlinesontheFleet.class);
+        workinprogressreportlocation=PageFactory.initElements(driver, WorkinProgressReportLocationParameterGIST.class);
+        partusageexportinvestion=PageFactory.initElements(driver,PartUsageExportInvestigationWALLER.class);
+        financeLeaseInvoice=PageFactory.initElements(driver,FinanceLeaseInvoicesarenotshowingthecorrectinvoicedateBENLEA.class);
 
         loginPage.selectCountryFromDropDown();
 
@@ -589,6 +624,54 @@ public class TestDriverActions {
         else if (getClass().getCanonicalName().contains("Labelexceptionerror")) {
             folderPath = System.getProperty("user.dir") +"/allure-results/Reports/LabelexceptionerrorReports/" + "__" + currentDateTime;
         }
+        else if (getClass().getCanonicalName().contains("PMInspectionReading")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/PMInspectionReadingReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("RentalEquipmentUtilizationParameternotworking")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/RentalEquipmentUtilizationParameternotworkingReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("QuantumFinancialExportIsShowingaPSTvalueForInvoices")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/QuantumFinancialExportIsShowingaPSTvalueForInvoicesReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("TheGLAccountHistoryexportcaps")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/TheGLAccountHistoryexportcapsReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("DeleteBackordersUNITED")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/DeleteBackordersUNITEDReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("ShowTechnicianParameternotworking")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/ShowTechnicianParameternotworkingReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("DispatchGLMappingExceptionError")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/DispatchGLMappingExceptionErrorReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("ConvertNonDedicatedreportstofullXLSXformat")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/ConvertNonDedicatedreportstofullXLSXformatReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("GLAccountHistoryScreentoincludeBillingLocation")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/GLAccountHistoryScreentoincludeBillingLocationReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("BackOrderLoadingTime")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/BackOrderLoadingTimeReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("HistorylinkunderThingstoDobreakstheCounterSaleManagerTaskflow")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/HistorylinkunderThingstoDobreakstheCounterSaleManagerTaskflowReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("UnitReadingreportisntfilteringbycustomer")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/UnitReadingreportisntfilteringbycustomerReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("AddtheoptiontoexcludedefectlabourlinesontheFleet")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/AddtheoptiontoexcludedefectlabourlinesontheFleetReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("WorkinProgressReportLocationParameterGIST")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/WorkinProgressReportLocationParameterGISTReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("PartUsageExportInvestigationWALLER")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/PartUsageExportInvestigationWALLERReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("FinanceLeaseInvoicesarenotshowingthecorrectinvoicedateBENLEA")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/FinanceLeaseInvoicesarenotshowingthecorrectinvoicedateBENLEAReports/" + "__" + currentDateTime;
+        }
 
 
 
@@ -783,6 +866,54 @@ public class TestDriverActions {
             }
             else if (getClass().getCanonicalName().contains("Labelexceptionerror")) {
                 cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\LabelexceptionerrorReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("PMInspectionReading")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\PMInspectionReadingReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("RentalEquipmentUtilizationParameternotworking")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\RentalEquipmentUtilizationParameternotworkingReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("QuantumFinancialExportIsShowingaPSTvalueForInvoices")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\QuantumFinancialExportIsShowingaPSTvalueForInvoicesReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("TheGLAccountHistoryexportcaps")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\TheGLAccountHistoryexportcapsReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("DeleteBackordersUNITED")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\DeleteBackordersUNITEDReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("ShowTechnicianParameternotworking")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\ShowTechnicianParameternotworkingReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("DispatchGLMappingExceptionError")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\DispatchGLMappingExceptionErrorReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("ConvertNonDedicatedreportstofullXLSXformat")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\ConvertNonDedicatedreportstofullXLSXformatReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("GLAccountHistoryScreentoincludeBillingLocation")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\GLAccountHistoryScreentoincludeBillingLocationReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("BackOrderLoadingTime")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\BackOrderLoadingTimeReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("HistorylinkunderThingstoDobreakstheCounterSaleManagerTaskflow")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\HistorylinkunderThingstoDobreakstheCounterSaleManagerTaskflowReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("UnitReadingreportisntfilteringbycustomer")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\UnitReadingreportisntfilteringbycustomerReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("AddtheoptiontoexcludedefectlabourlinesontheFleet")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\AddtheoptiontoexcludedefectlabourlinesontheFleetReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("WorkinProgressReportLocationParameterGIST")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\WorkinProgressReportLocationParameterGISTReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("PartUsageExportInvestigationWALLER")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\PartUsageExportInvestigationWALLERReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("FinanceLeaseInvoicesarenotshowingthecorrectinvoicedateBENLEA")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\FinanceLeaseInvoicesarenotshowingthecorrectinvoicedateBENLEAReports\\" + theDir.getName();
             }
 
 

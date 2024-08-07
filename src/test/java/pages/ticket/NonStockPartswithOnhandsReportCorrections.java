@@ -186,7 +186,7 @@ public class NonStockPartswithOnhandsReportCorrections extends TestDriverActions
             document = PDDocument.load(fis);
             PDFTextStripper pdfStripper = new PDFTextStripper();
             String pdfFullText = pdfStripper.getText(document);
-            //       System.out.println(pdfFullText);
+            //      System.out.println(pdfFullText);
 
             if (pdfFullText.contains("Shop Charges:")) {
                 System.out.println("showing full part name BK3Z-61278L01-BC");

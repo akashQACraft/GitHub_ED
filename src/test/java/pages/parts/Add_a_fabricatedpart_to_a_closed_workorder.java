@@ -7,6 +7,7 @@ import actions.WebElementActions;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import tests.TestDriverActions;
 import utils.TestListener;
@@ -127,7 +128,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
     @FindBy(xpath = "(//span[text()='Total Charge'])[2]")
     WebElement TotalCharges;
 
-    @FindBy(xpath = "//a[contains(@id,'0:clPartsStockOnHand')]")
+    @FindBy(xpath = "(//a[contains(@id,':clPartsStockOnHand')])[1]")
     public WebElement label_PartName;
 
     @FindBy(xpath = "//label[text()='Part #:']")
@@ -169,7 +170,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
     @FindBy(xpath = "(//label[text()='Part #:']/preceding-sibling::span)[2]")
     WebElement RequiredPart;
 
-    @FindBy(xpath = "(//label[text()='Part #:']/parent::span)[2]")
+    @FindBy(xpath = "//input[contains(@id,':it1::content')]")
     WebElement PartTextArea;
 
 
@@ -182,7 +183,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
     @FindBy(xpath = "//label[text()='Description:']")
     WebElement Description;
 
-    @FindBy(xpath = "(//label[text()='Description:']/parent::span)[2]")
+    @FindBy(xpath = "//input[contains(@id,':it2::content')]")
     WebElement DescriptionTextArea;
 
     @FindBy(xpath = "(//label[text()='Stocking UOM:'])[1]")
@@ -203,8 +204,11 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
     @FindBy(xpath ="//label[text()='Product Group:']")
     WebElement ProductGroup;
 
-    @FindBy(xpath = "(//label[text()='Product Group:']/parent::span)[2]")
+    @FindBy(xpath = "//select[contains(@id,':soc2::content')]")
     WebElement  ProductGroupTextArea;
+
+    @FindBy(xpath = "//select[contains(@id,':soc2::content')]")
+    WebElement ProductGoup;
 
     @FindBy(xpath = "//label[text()='Cost:']/preceding-sibling::span")
     WebElement CostRequired;
@@ -212,7 +216,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
     @FindBy(xpath = "//label[text()='Cost:']")
     WebElement cost;
 
-    @FindBy(xpath = "(//label[text()='Cost:']/parent::span)[2]")
+    @FindBy(xpath = "//input[contains(@id,':it4::content')]")
     WebElement CostTextArea;
 
     @FindBy(xpath = "//label[text()='Costing Method:']/preceding-sibling::span")
@@ -270,7 +274,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
      WebElement UnitCost2;
 
     //@FindBy(xpath = "(//span[text()='Cancel'])[2]")
-    @FindBy(xpath = "//div[contains(@id,':pslStockOnHand::b')]/div/div/table/tbody/tr/td/div/a/span")
+    @FindBy(xpath = "(//div[contains(@id,':pslStockOnHand::b')]/div/div/table/tbody/tr/td/div/a/span)[2]")
     WebElement Button1;
 
     @FindBy(xpath = "//a[contains(@id,':0:cRTWAP1')]/child::img")
@@ -280,7 +284,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
     WebElement Delete1;
 
 
-    @FindBy(xpath = "//a[text()='Sign Out']")
+    @FindBy(xpath = "//a[contains(..,'Sign Out')]")
     public WebElement label_SignOut;
 
     @FindBy(xpath = "//input[contains(@id,'username::content')]")
@@ -473,7 +477,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
 
     }
     /**verify MainScreenTotalCharge */
-    public void TotalCharge () throws InterruptedException {
+    public void varifyTotalCharge () throws InterruptedException {
         WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(TotalCharges);
         Assert.assertTrue(TotalCharges.isDisplayed());
     }
@@ -484,7 +488,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
 
     }
     /**verify partHash ,Part Description:,Fabricated Quantity:,Unit Cost:*/
-    public void PartHash1() throws InterruptedException {
+    public void varifyOnPartHash1() throws InterruptedException {
         WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(label_Part);
         Assert.assertTrue(label_Part.isDisplayed());
 
@@ -541,8 +545,22 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
 
       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(PartTextArea);
       Assert.assertTrue(PartTextArea.isDisplayed());
+      WaitActions.getWaits().loadingWait(loder);
 
   }
+    String TitleUnit = WebElementActions.getActions().randomAlphaNumeric(10);
+  /**enter partTextArea*/
+  public void enterpart () throws InterruptedException {
+
+      WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(PartTextArea);
+      WebElementActions.getActions().inputText(PartTextArea,TitleUnit);
+      TestListener.saveScreenshotPNG(driver);
+
+
+  }
+
+
+
   /**verify  Description,TextArea*/
   public void verifypartDescription () throws InterruptedException {
       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(DescriptionRequired);
@@ -554,8 +572,20 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(DescriptionTextArea);
       Assert.assertTrue(DescriptionTextArea.isDisplayed());
 
+
+
   }
-  /**verify RequiredStocking UOM:.Stocking UOM:,textarea*/
+
+    /**enter Description */
+    public void entertheDescription () throws InterruptedException {
+        WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(DescriptionTextArea);
+        WebElementActions.getActions().inputText(DescriptionTextArea,TitleUnit);
+        TestListener.saveScreenshotPNG(driver);
+
+    }
+
+
+    /**verify RequiredStocking UOM:.Stocking UOM:,textarea*/
   public void verifyStockingUOM () throws InterruptedException {
 
       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(StockingUOMRequired);
@@ -567,6 +597,7 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(StockingUOMTextArea);
       Assert.assertTrue(StockingUOMTextArea.isDisplayed());
   }
+
   /**verify Stock Part */
   public void verifyStockPart () throws InterruptedException {
       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(StockPart);
@@ -584,6 +615,17 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(ProductGroupTextArea);
       Assert.assertTrue(ProductGroupTextArea.isDisplayed());
   }
+  /**select Group */
+  public void selectGroup () throws InterruptedException {
+      Select obj= new Select(ProductGoup);
+      obj.selectByVisibleText("00 00");
+      WaitActions.getWaits().loadingWait(loder);
+
+
+
+  }
+
+
   /**verify costRequired,cost,costTextArea*/
   public void verifyCostRequired () throws InterruptedException {
       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(CostRequired);
@@ -596,6 +638,13 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
       Assert.assertTrue(CostTextArea.isDisplayed());
 
   }
+  /**enter The CostTextArea*/
+  public void entertheCostTextArea () throws InterruptedException {
+      WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(CostTextArea);
+      WebElementActions.getActions().inputText(CostTextArea,appProp.getProperty("Cost"));
+
+  }
+
  /**verify costingMethodRequired,costingMethod,CostingMethodTextArea*/
  public void verifyCostingMethod () throws InterruptedException {
      WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(CostingMethodRequired);
@@ -636,22 +685,17 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
   }
   /**click on Cancel Button*/
   public void clickonCacelButton () throws InterruptedException {
-      WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(CancelButton);
-      WebElementActions.getActions().clickElement(CancelButton);
+      WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(OKButton);
+      WebElementActions.getActions().clickElement(OKButton);
+      WaitActions.getWaits().loadingWait(loder);
   }
   /**click on PartTextArea*/
    public void clickonPartTextArea () throws InterruptedException {
-
-       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(txt_PartTextArea);
-       WebElementActions.getActions().inputText(txt_PartTextArea, appProp.getProperty("PartValue"));
-       Thread.sleep(5000);
-       txt_PartTextArea.sendKeys(Keys.ENTER);
-       WaitActions.getWaits().loadingWait(loder);
-
-
-     //  WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(label_PartNumber);
-    //   WebElementActions.getActions().clickElement(label_PartNumber);
-    //   WaitActions.getWaits().loadingWait(loder);
+//       WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(txt_PartTextArea);
+//       WebElementActions.getActions().inputText(txt_PartTextArea, appProp.getProperty("PartValue"));
+//       Thread.sleep(5000);
+//       txt_PartTextArea.sendKeys(Keys.ENTER);
+//       WaitActions.getWaits().loadingWait(loder);
 
        WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(btn_IssuePartBtn);
        WebElementActions.getActions().clickElement(btn_IssuePartBtn);
@@ -716,15 +760,14 @@ public class Add_a_fabricatedpart_to_a_closed_workorder extends TestDriverAction
        WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(Button1);
        WebElementActions.getActions().clickElement(Button1);
 
-
-       WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(trash1);
-       WebElementActions.getActions().clickElement(trash1);
-
-
-       WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(Delete1);
-       WebElementActions.getActions().clickElement(Delete1);
-
-
+//       WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(trash1);
+//       WebElementActions.getActions().clickElement(trash1);
+//
+//
+//       WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(Delete1);
+//       WebElementActions.getActions().clickElement(Delete1);
+//
+//
        WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(btn_Close);
        WebElementActions.getActions().clickElement(btn_Close);
        WaitActions.getWaits().loadingWait(loder);

@@ -42,7 +42,6 @@ public class WaitActions extends TestDriverActions {
         return instance;
     }
 
-
     /**
      * wait for webElement visible
      *
@@ -63,7 +62,7 @@ public class WaitActions extends TestDriverActions {
      * @return
      */
     public boolean WaitUntilWebElementIsVisible(List<WebElement> element) {
-        new WebDriverWait(driver, Duration.ofSeconds(30))    // 10
+        new WebDriverWait(driver, Duration.ofSeconds(60))    // 10
                 .until(ExpectedConditions.visibilityOfAllElements(element));
         System.out.println("WebElement is visible using locator: " + "<" + element.toString() + ">");
         return true;
