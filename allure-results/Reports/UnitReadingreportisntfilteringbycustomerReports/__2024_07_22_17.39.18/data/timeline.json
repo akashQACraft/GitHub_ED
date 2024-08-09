@@ -1,0 +1,65 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-4QD2456",
+    "children" : [ {
+      "name" : "13768@DESKTOP-4QD2456.main(1)",
+      "children" : [ {
+        "name" : "T_003_click  On Run Report ",
+        "uid" : "2c4ae4a51afc0346",
+        "parentUid" : "2615a7f0015dd0bf8ff70f44c3e9ebf3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721649727741,
+          "stop" : 1721649938417,
+          "duration" : 210676
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "T_002_verify Report Categories  ",
+        "uid" : "c889375123f5a42b",
+        "parentUid" : "2615a7f0015dd0bf8ff70f44c3e9ebf3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721649664607,
+          "stop" : 1721649727609,
+          "duration" : 63002
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "T_004_enter The Customer Search ",
+        "uid" : "c06dd89986f506e9",
+        "parentUid" : "2615a7f0015dd0bf8ff70f44c3e9ebf3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721649938546,
+          "stop" : 1721650158668,
+          "duration" : 220122
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "T_001_Login the page and go To Report Scrren ",
+        "uid" : "a502566187924405",
+        "parentUid" : "2615a7f0015dd0bf8ff70f44c3e9ebf3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721649602143,
+          "stop" : 1721649664236,
+          "duration" : 62093
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2615a7f0015dd0bf8ff70f44c3e9ebf3"
+    } ],
+    "uid" : "4c1c973aff32a65c147d7e2e520ae642"
+  } ]
+}

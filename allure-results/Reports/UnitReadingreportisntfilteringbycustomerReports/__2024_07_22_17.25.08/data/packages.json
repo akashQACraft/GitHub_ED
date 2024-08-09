@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer",
+    "children" : [ {
+      "name" : "T_001_goToCustomer",
+      "uid" : "e67806f13d58ac47",
+      "parentUid" : "c3ee8ed9e8bbb21829b12734792b12bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1721648749056,
+        "stop" : 1721648813574,
+        "duration" : 64518
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "T_002_verifyReportCategories",
+      "uid" : "d0d3aaf3432f3079",
+      "parentUid" : "c3ee8ed9e8bbb21829b12734792b12bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1721648813953,
+        "stop" : 1721648877445,
+        "duration" : 63492
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "T_003_clickOnRunReport",
+      "uid" : "7be98a3df127da95",
+      "parentUid" : "c3ee8ed9e8bbb21829b12734792b12bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1721648877617,
+        "stop" : 1721649088457,
+        "duration" : 210840
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "T_004_enterTHeCustomerSearch",
+      "uid" : "3c5ef2c5838fe58",
+      "parentUid" : "c3ee8ed9e8bbb21829b12734792b12bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1721649088591,
+        "stop" : 1721649308668,
+        "duration" : 220077
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  } ]
+}

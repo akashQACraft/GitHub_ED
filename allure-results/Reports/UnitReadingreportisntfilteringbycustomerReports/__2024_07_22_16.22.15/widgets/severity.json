@@ -1,0 +1,41 @@
+[ {
+  "uid" : "8a25fb08a9646ce",
+  "name" : "T_003_click  On Run Report ",
+  "time" : {
+    "start" : 1721645322110,
+    "stop" : 1721645411735,
+    "duration" : 89625
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eaec6bae4dc8d48a",
+  "name" : "T_002_verify Report Categories  ",
+  "time" : {
+    "start" : 1721645257368,
+    "stop" : 1721645321971,
+    "duration" : 64603
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "210701e9a314755b",
+  "name" : "T_004_enter The Customer Search ",
+  "time" : {
+    "start" : 1721645411853,
+    "stop" : 1721645535460,
+    "duration" : 123607
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "824f31a39b8bf9b5",
+  "name" : "T_001_Login the page and go To Report Scrren ",
+  "time" : {
+    "start" : 1721645194739,
+    "stop" : 1721645256964,
+    "duration" : 62225
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

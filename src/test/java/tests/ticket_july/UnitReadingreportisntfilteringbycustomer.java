@@ -13,7 +13,11 @@ public class UnitReadingreportisntfilteringbycustomer extends TestDriverActions 
 
     @Test(priority = 0, description = "T_001_Login the page and go To Report Scrren ", enabled = true)
     @Description("Test Description : Login the page and go To Report Scrren ")
+<<<<<<< HEAD
     public void T_001_goToCustomer() throws FileNotFoundException, InterruptedException {
+=======
+    public void T_001_goToReport() throws FileNotFoundException, InterruptedException {
+>>>>>>> 9ae90571ea1a724c32aa4df46f7d1f3dd514d9fd
         loginPage.loginWithValidCredentials(appProp.getProperty("username"), appProp.getProperty("password"));
         unitreadingreport.gotoReport();
     }

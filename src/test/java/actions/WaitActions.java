@@ -42,7 +42,6 @@ public class WaitActions extends TestDriverActions {
         return instance;
     }
 
-
     /**
      * wait for webElement visible
      *

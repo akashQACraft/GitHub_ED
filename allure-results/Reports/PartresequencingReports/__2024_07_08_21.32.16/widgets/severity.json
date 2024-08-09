@@ -1,0 +1,71 @@
+[ {
+  "uid" : "15d0f418ddaf6c",
+  "name" : "T_001_Login the page and go to Complete RO  Screen",
+  "time" : {
+    "start" : 1720454535731,
+    "stop" : 1720454535734,
+    "duration" : 3
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "2fee1ff1157654ec",
+  "name" : "T_003_enter The Unit Number ",
+  "time" : {
+    "start" : 1720454536157,
+    "stop" : 1720454536157,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "7aacdb07d5d937c0",
+  "name" : "T_005_click On Add  Part ",
+  "time" : {
+    "start" : 1720454536386,
+    "stop" : 1720454536387,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "4d65b36932956c2b",
+  "name" : "T_006_verify Part Name() ",
+  "time" : {
+    "start" : 1720454536477,
+    "stop" : 1720454536478,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "1287e30596413211",
+  "name" : "initialization",
+  "time" : {
+    "start" : 1720454535536,
+    "stop" : 1720454535539,
+    "duration" : 3
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "31ad064ff736e99e",
+  "name" : "T_004_verify Truck And Trailer ",
+  "time" : {
+    "start" : 1720454536267,
+    "stop" : 1720454536267,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "a7e3129250746162",
+  "name" : "T_002_click On New RO",
+  "time" : {
+    "start" : 1720454536042,
+    "stop" : 1720454536043,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+} ]

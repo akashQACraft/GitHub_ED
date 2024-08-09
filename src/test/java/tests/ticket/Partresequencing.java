@@ -79,6 +79,10 @@ public class Partresequencing extends TestDriverActions {
     @Description("Test Description :click On Add  Part  ")
     public void T_006_verifyPartName() throws IOException, InterruptedException {
         partresequesencing.varifyOnAcessoriesGroup ();
+<<<<<<< HEAD
+=======
+        partresequesencing.compareWebElementLists();
+>>>>>>> 9ae90571ea1a724c32aa4df46f7d1f3dd514d9fd
         partresequesencing. clickOnReSequence();
         partresequesencing.compareWebElementLists2();
         partresequesencing.clickOnClose2();

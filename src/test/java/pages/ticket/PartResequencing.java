@@ -23,8 +23,12 @@ import java.util.List;
 import java.util.Random;
 
 public class PartResequencing extends TestDriverActions {
+<<<<<<< HEAD
 
     @FindBy(xpath = "//a[contains(.,'WO002589')]")
+=======
+    @FindBy(xpath = "//a[contains(.,'WO002627')]")
+>>>>>>> 9ae90571ea1a724c32aa4df46f7d1f3dd514d9fd
     WebElement Referance;
 
     @FindBy(xpath = "//a[contains(.,'New RO')]")
@@ -139,8 +143,8 @@ public class PartResequencing extends TestDriverActions {
     @FindBy(xpath = "//div[contains(@id,':ocb1:ctbClose')]//child::a/span[text()='Close']")
     WebElement btn_Close;
 
-   @FindBy(xpath = "//a[contains(@id,':cl3')]/span")
-   List< WebElement> PartNumberRow;
+    @FindBy(xpath = "//a[contains(@id,':cl3')]/span")
+    List<WebElement> PartNumberRow;
 
     @FindBy(xpath = "//h2[contains(.,'Accessories Group')]")
     WebElement AcessoriesGroup;
@@ -216,10 +220,17 @@ public class PartResequencing extends TestDriverActions {
     /*click On New RO**/
     public void clickOnNewRO() throws InterruptedException {
 
+<<<<<<< HEAD
          WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(NewRO);
           WebElementActions.getActions().clickElement(NewRO);
           WaitActions.getWaits().loadingWait(loder);
 //
+=======
+        WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(NewRO);
+        WebElementActions.getActions().clickElement(NewRO);
+        WaitActions.getWaits().loadingWait(loder);
+
+>>>>>>> 9ae90571ea1a724c32aa4df46f7d1f3dd514d9fd
 //        WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(Referance);
 //        WebElementActions.getActions().clickElement(Referance);
 
@@ -494,18 +505,36 @@ public class PartResequencing extends TestDriverActions {
         WebElementActions.getActions().clickElement(btn_Close);
         Thread.sleep(5000);
         WaitActions.getWaits().loadingWait(loder);
-;
+        ;
     }
 
 
     /* * click On Re-Sequence*/
     public void clickOnReSequence() throws InterruptedException {
+<<<<<<< HEAD
+
+        WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(ReSequence);
+        WebElementActions.getActions().clickElement(ReSequence);
+        Thread.sleep(3000);
+        WaitActions.getWaits().loadingWait(loder);
+=======
+>>>>>>> 9ae90571ea1a724c32aa4df46f7d1f3dd514d9fd
 
         WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(ReSequence);
         WebElementActions.getActions().clickElement(ReSequence);
         Thread.sleep(3000);
         WaitActions.getWaits().loadingWait(loder);
 
+
+    }
+
+    /**
+     * varify On Acessories Group
+     */
+    public void varifyOnAcessoriesGroup() throws InterruptedException {
+
+        WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(AcessoriesGroup);
+        Assert.assertTrue(AcessoriesGroup.isDisplayed());
 
     }
     /**varify On Acessories Group */
@@ -517,10 +546,17 @@ public class PartResequencing extends TestDriverActions {
     }
 
     public void compareWebElementLists() throws InterruptedException {
+<<<<<<< HEAD
         Thread.sleep(8000);
         WaitActions.getWaits().WaitUntilWebElementIsVisible(PartNumberRow);
         System.out.println("size of list :" + PartNumberRow.size());
         for (int i = 0; i <= PartNumberRow.size()-1; i++) {
+=======
+        Thread.sleep(10000);
+        WaitActions.getWaits().WaitUntilWebElementIsVisible(PartNumberRow);
+        System.out.println("size of list :"+ PartNumberRow.size());
+        for (int i = 0; i <=PartNumberRow.size(); i++) {
+>>>>>>> 9ae90571ea1a724c32aa4df46f7d1f3dd514d9fd
             String ele = PartNumberRow.get(i).getText();
             System.out.println("line1 :" + ele);
 
@@ -532,7 +568,7 @@ public class PartResequencing extends TestDriverActions {
         Thread.sleep(8000);
         WaitActions.getWaits().WaitUntilWebElementIsVisible(list2);
         System.out.println("size of list :" + list2.size());
-        for (int i = 0; i <= list2.size()-1; i++) {
+        for (int i = 0; i < list2.size()-1; i++) {
             if (!PartNumberRow.get(i).equals(list2.get(i + 1))) {
                 System.out.println("Elements at index " + i + " and " + (i + 1) );
                 String ele2 = list2.get(i).getText();

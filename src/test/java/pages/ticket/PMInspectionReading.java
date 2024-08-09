@@ -186,6 +186,7 @@ public class PMInspectionReading extends TestDriverActions {
 
     @FindBy(xpath = "//img[contains(@id,':0:cilvmrsys::icon')]")
     WebElement img_AnnualDOTInspection;
+<<<<<<< HEAD
 
 
 
@@ -352,8 +353,152 @@ public class PMInspectionReading extends TestDriverActions {
 
 
 
+=======
+>>>>>>> 9ae90571ea1a724c32aa4df46f7d1f3dd514d9fd
 
 
+
+    @FindBy(xpath = "//span[text()='Add']")
+    WebElement  AddButton;
+
+    @FindBy(xpath = "(//img[@title='Annual DOT Inspection'])[1]")
+    WebElement clickOnImgDOT;
+
+    @FindBy(xpath = "(//a[contains(@id,':clPopupWoact')]/span)[1]")
+    WebElement link_AnnualDOTInspection;
+
+   @FindBy(xpath = "//img[contains(@id,':0:ciDWoAct1::icon')]")
+   WebElement Cancel;
+
+   @FindBy(xpath = "//a[contains(.,'Yes')]")
+   WebElement btn_Yes;
+
+   @FindBy(xpath = "(//span[text()='Select'])[1]")
+   WebElement btn_SelectTwo;
+    @FindBy(xpath = "//a[contains(.,'Tires')]/span")
+    WebElement Tires;
+
+    @FindBy(xpath = "//input[contains(@id,':0:itValueNumeric::content')]")
+    WebElement FrontRightTired;
+
+
+   @FindBy(xpath = "//input[contains(@id,':1:itValueNumeric::content')]")
+   WebElement FrontLeftTired;
+
+   @FindBy(xpath = "//span[contains(@id,':itValueReading')]")
+   WebElement OdometerReading;
+
+   @FindBy(xpath = "//span[text()='Done / Validate']")
+   WebElement btn_DoneAndValidate;
+
+   @FindBy(xpath = "//a[contains(.,'Brakes')]/span")
+   WebElement Breaks;
+
+   @FindBy(xpath = "//a[contains(.,'Fluids')]/span")
+   WebElement Fluids;
+
+   @FindBy(xpath = "//a[contains(.,'Lights')]/span")
+   WebElement Lights;
+
+    @FindBy(xpath = "//span[contains(.,'Defect Summary')]")
+    WebElement DefectSummary;
+
+  @FindBy(xpath = "//h1[text()='Defect Summary']")
+  WebElement DefectSummarySign;
+
+  @FindBy(xpath = "(//a[contains(.,'Sign')])[2]")
+  WebElement Sign;
+
+  @FindBy(xpath = "//span[contains(.,'Technician Signature')]")
+  WebElement TechnicianSignature;
+
+  @FindBy(xpath = "//div[contains(@id,':psl12::c')]/child::input/following::canvas")
+  WebElement Canvas;
+
+  @FindBy(xpath = "//a[contains(.,'Continue')]")
+  WebElement Continue;
+
+  @FindBy(xpath = "//label[text()='Search Unit:']/preceding-sibling::input")
+  WebElement UnitNo;
+
+  @FindBy(xpath = "(//a[contains(.,'Print')])[1]")
+  WebElement btn_Print;
+
+  @FindBy(xpath = "//a[contains(.,'More Info')]")
+  WebElement MoreInfo;
+
+
+  @FindBy(xpath = "(//a[contains(.,'WO00')])[1]")
+  WebElement InspectedBy;
+
+  @FindBy(xpath = "//label[contains(.,'Unit #:')]/parent::span/parent::div/following-sibling::div//a/child::span")
+  WebElement UnitValueOne;
+
+  @FindBy(xpath = "//label[contains(.,'Odometer:')]")
+  WebElement OdometerOne;
+
+  @FindBy(xpath = "//span[contains(@id,':0:itCurReadingValueId')]/parent::td/parent::tr")
+  WebElement OdometerValue;
+
+  @FindBy(xpath = "//span[contains(.,'Back to Inspection History')]")
+  WebElement BackTOInspectionHistory;
+
+  @FindBy(xpath = "(//span[contains(.,'Exit')])[3]")
+  WebElement Exit;
+
+
+  @FindBy(xpath = "(//a[text()='Readings'])[1]")
+  WebElement ReadingsTwo;
+
+  @FindBy(xpath = "//td[contains(@id,':terh:0:c4')]/span")
+  WebElement ReadingValues;
+
+  @FindBy(xpath = "(//span[text()='KM'])[1]")
+  WebElement Km;
+
+  @FindBy(xpath = "//span[contains(@id,':0:clWON::text')]")
+  WebElement Referance ;
+
+  @FindBy(xpath = "(//a[contains(.,'Save / Exit')])[2]")
+  WebElement SaveAndExit;
+
+  @FindBy(xpath = "//a[contains(.,'Save / Exit')]/span")
+  WebElement SaveAndExitOne;
+
+  @FindBy(xpath = "(//a[contains(.,'Tech RO')])[2]")
+  WebElement TechROOne;
+
+  @FindBy(xpath = "(//a[contains(.,'Summary')])[1]")
+  WebElement Summary;
+
+
+  @FindBy(xpath = "//input[contains(@id,'alueId::content')]")
+  WebElement OdometerValueSummaryTab;
+
+  @FindBy(xpath = "//input[contains(@id,':itSearch::content')]")
+  WebElement SearchTextAreaRefe;
+
+  @FindBy(xpath = "//span[text()='Refresh']")
+  WebElement  Refresh;
+
+   @FindBy(xpath = "(//a[contains(.,'WO00')])[1]")
+   WebElement ReferanceOne;
+
+   @FindBy(xpath = "//label[text()='Odometer:']/parent::td/following-sibling::td/child::table")
+   WebElement OdometerROvalue;
+
+   @FindBy(xpath = "//a[contains(@id,':0:clWON')]/parent::div/parent::div")
+   WebElement ROHash;
+
+
+    @FindBy(xpath = "//a[contains(.,'Sign Out')]")
+    WebElement btn_signOut;
+
+    @FindBy(xpath = "//input[@name='username']")
+    public WebElement inputbox_Username;
+
+    @FindBy(xpath = "//h1[contains(.,'Working...Please Wait')]")
+    List<WebElement> loder;
 
 
     /**

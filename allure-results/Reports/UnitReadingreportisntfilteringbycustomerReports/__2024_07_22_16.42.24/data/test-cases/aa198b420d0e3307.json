@@ -1,0 +1,125 @@
+{
+  "uid" : "aa198b420d0e3307",
+  "name" : "T_002_verify Report Categories  ",
+  "fullName" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer.T_002_verifyReportCategories",
+  "historyId" : "90fd9c41af30400d450d04eb20b62b75",
+  "time" : {
+    "start" : 1721646471300,
+    "stop" : 1721646533214,
+    "duration" : 61914
+  },
+  "description" : "Test Description : verify Report Categories",
+  "descriptionHtml" : "<p>Test Description : verify Report Categories</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "initialization",
+    "time" : {
+      "start" : 1721646357868,
+      "stop" : 1721646406130,
+      "duration" : 48262
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Test Description : verify Report Categories",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ce92dc1e329e4027",
+      "name" : "Page Screenshot",
+      "source" : "ce92dc1e329e4027.png",
+      "type" : "image/png",
+      "size" : 100250
+    }, {
+      "uid" : "721c1a487fae8c3",
+      "name" : "Page Screenshot",
+      "source" : "721c1a487fae8c3.png",
+      "type" : "image/png",
+      "size" : 102354
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "afterMethodTakeScreenShot",
+    "time" : {
+      "start" : 1721646533231,
+      "stop" : 1721646533343,
+      "duration" : 112
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "25102661977857ab",
+      "name" : "Page Screenshot",
+      "source" : "25102661977857ab.png",
+      "type" : "image/png",
+      "size" : 102337
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "testMethod",
+    "value" : "T_002_verifyReportCategories"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4QD2456"
+  }, {
+    "name" : "thread",
+    "value" : "13832@DESKTOP-4QD2456.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "aa198b420d0e3307.json",
+  "parameterValues" : [ ]
+}

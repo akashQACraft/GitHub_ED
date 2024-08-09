@@ -1,0 +1,125 @@
+{
+  "uid" : "210701e9a314755b",
+  "name" : "T_004_enter The Customer Search ",
+  "fullName" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer.T_004_enterTHeCustomerSearch",
+  "historyId" : "2619c6cf4c488ca5e7ed60b9f6acf736",
+  "time" : {
+    "start" : 1721645411853,
+    "stop" : 1721645535460,
+    "duration" : 123607
+  },
+  "description" : "Test Description : enter The Customer Search",
+  "descriptionHtml" : "<p>Test Description : enter The Customer Search</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "initialization",
+    "time" : {
+      "start" : 1721645147545,
+      "stop" : 1721645194634,
+      "duration" : 47089
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Test Description : enter The Customer Search",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "877315fb9ac1556b",
+      "name" : "Page Screenshot",
+      "source" : "877315fb9ac1556b.png",
+      "type" : "image/png",
+      "size" : 100677
+    }, {
+      "uid" : "1934b1b5d6e5d341",
+      "name" : "Page Screenshot",
+      "source" : "1934b1b5d6e5d341.png",
+      "type" : "image/png",
+      "size" : 11113
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "afterMethodTakeScreenShot",
+    "time" : {
+      "start" : 1721645535463,
+      "stop" : 1721645535540,
+      "duration" : 77
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c522da888cc50bc1",
+      "name" : "Page Screenshot",
+      "source" : "c522da888cc50bc1.png",
+      "type" : "image/png",
+      "size" : 11126
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "testMethod",
+    "value" : "T_004_enterTHeCustomerSearch"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4QD2456"
+  }, {
+    "name" : "thread",
+    "value" : "8824@DESKTOP-4QD2456.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "210701e9a314755b.json",
+  "parameterValues" : [ ]
+}

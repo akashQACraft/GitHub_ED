@@ -1,0 +1,119 @@
+{
+  "uid" : "175643bffc045062",
+  "name" : "T_003_click  On Run Report ",
+  "fullName" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer.T_003_clickOnRunReport",
+  "historyId" : "41c26f13e03664a9cf9040a78ce0b978",
+  "time" : {
+    "start" : 1721646533350,
+    "stop" : 1721646622886,
+    "duration" : 89536
+  },
+  "description" : "Test Description : click  On Run Report",
+  "descriptionHtml" : "<p>Test Description : click  On Run Report</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "initialization",
+    "time" : {
+      "start" : 1721646357868,
+      "stop" : 1721646406130,
+      "duration" : 48262
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Test Description : click  On Run Report",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "4b5798492c10a02a",
+      "name" : "Page Screenshot",
+      "source" : "4b5798492c10a02a.png",
+      "type" : "image/png",
+      "size" : 99494
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "afterMethodTakeScreenShot",
+    "time" : {
+      "start" : 1721646622890,
+      "stop" : 1721646623013,
+      "duration" : 123
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "fb64a6788dfff13",
+      "name" : "Page Screenshot",
+      "source" : "fb64a6788dfff13.png",
+      "type" : "image/png",
+      "size" : 99635
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "testMethod",
+    "value" : "T_003_clickOnRunReport"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4QD2456"
+  }, {
+    "name" : "thread",
+    "value" : "13832@DESKTOP-4QD2456.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "175643bffc045062.json",
+  "parameterValues" : [ ]
+}
