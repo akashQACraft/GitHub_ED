@@ -57,7 +57,7 @@ public class Partresequencing extends TestDriverActions {
        partresequesencing.clickOnAddLabour();
         partresequesencing.clickOnAddButton ();
         partresequesencing.clickOnAddParts1();
-        partresequesencing.clickOnCoreRetrun();
+        partresequesencing.clickOnIssuePart();
 
     }
 
@@ -78,7 +78,7 @@ public class Partresequencing extends TestDriverActions {
     @Test(priority = 5, description = "T_006_verify Part Name() ", enabled = true)
     @Description("Test Description :click On Add  Part  ")
     public void T_006_verifyPartName() throws IOException, InterruptedException {
-        partresequesencing.compareWebElementLists();
+        partresequesencing.varifyOnAcessoriesGroup ();
         partresequesencing. clickOnReSequence();
         partresequesencing.compareWebElementLists2();
         partresequesencing.clickOnClose2();

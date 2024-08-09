@@ -1,0 +1,69 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Surefire suite",
+    "children" : [ {
+      "name" : "Surefire test",
+      "children" : [ {
+        "name" : "tests.ticket_july.UnitReadingreportisntfilteringbycustomer",
+        "children" : [ {
+          "name" : "T_001_Login the page and go To Report Scrren ",
+          "uid" : "a264b06c5683b26c",
+          "parentUid" : "b0b6b4b17d7c6c707e7b746ec6eca166",
+          "status" : "passed",
+          "time" : {
+            "start" : 1721644330036,
+            "stop" : 1721644395846,
+            "duration" : 65810
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "T_002_verify Report Categories  ",
+          "uid" : "39cf3f07344608eb",
+          "parentUid" : "b0b6b4b17d7c6c707e7b746ec6eca166",
+          "status" : "passed",
+          "time" : {
+            "start" : 1721644396224,
+            "stop" : 1721644461124,
+            "duration" : 64900
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "T_003_click  On Run Report ",
+          "uid" : "1bed31e55eb1d239",
+          "parentUid" : "b0b6b4b17d7c6c707e7b746ec6eca166",
+          "status" : "passed",
+          "time" : {
+            "start" : 1721644461248,
+            "stop" : 1721644545083,
+            "duration" : 83835
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "T_004_enter The Customer Search ",
+          "uid" : "16710513254767b6",
+          "parentUid" : "b0b6b4b17d7c6c707e7b746ec6eca166",
+          "status" : "passed",
+          "time" : {
+            "start" : 1721644545217,
+            "stop" : 1721644619644,
+            "duration" : 74427
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "b0b6b4b17d7c6c707e7b746ec6eca166"
+      } ],
+      "uid" : "1fcb2e6ec8e5b5e8a1f2a70b87c80b24"
+    } ],
+    "uid" : "940a09faf31371a51747026c9d178f0a"
+  } ]
+}

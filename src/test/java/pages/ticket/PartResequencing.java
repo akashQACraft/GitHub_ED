@@ -24,7 +24,7 @@ import java.util.Random;
 
 public class PartResequencing extends TestDriverActions {
 
-    @FindBy(xpath = "//a[contains(.,'WO002504')]")
+    @FindBy(xpath = "//a[contains(.,'WO002589')]")
     WebElement Referance;
 
     @FindBy(xpath = "//a[contains(.,'New RO')]")
@@ -142,10 +142,8 @@ public class PartResequencing extends TestDriverActions {
    @FindBy(xpath = "//a[contains(@id,':cl3')]/span")
    List< WebElement> PartNumberRow;
 
-
-
-    @FindBy(xpath = "//a[contains(.,'BOLT1')]")
-    WebElement BOLT1;
+    @FindBy(xpath = "//h2[contains(.,'Accessories Group')]")
+    WebElement AcessoriesGroup;
 
     @FindBy(xpath = "//a[contains(.,'0220')]")
     WebElement Test;
@@ -217,9 +215,11 @@ public class PartResequencing extends TestDriverActions {
 
     /*click On New RO**/
     public void clickOnNewRO() throws InterruptedException {
+
          WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(NewRO);
           WebElementActions.getActions().clickElement(NewRO);
-
+          WaitActions.getWaits().loadingWait(loder);
+//
 //        WaitActions.getWaits().waitForElementToBeRefreshedAndClickable(Referance);
 //        WebElementActions.getActions().clickElement(Referance);
 
@@ -492,6 +492,7 @@ public class PartResequencing extends TestDriverActions {
 
         WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(btn_Close);
         WebElementActions.getActions().clickElement(btn_Close);
+        Thread.sleep(5000);
         WaitActions.getWaits().loadingWait(loder);
 ;
     }
@@ -499,25 +500,36 @@ public class PartResequencing extends TestDriverActions {
 
     /* * click On Re-Sequence*/
     public void clickOnReSequence() throws InterruptedException {
+
         WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(ReSequence);
-        WebElementActions.getActions().clickUsingJS(ReSequence);
+        WebElementActions.getActions().clickElement(ReSequence);
+        Thread.sleep(3000);
+        WaitActions.getWaits().loadingWait(loder);
 
 
     }
+    /**varify On Acessories Group */
+    public void varifyOnAcessoriesGroup () throws InterruptedException {
 
+        WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(AcessoriesGroup);
+        Assert.assertTrue(AcessoriesGroup.isDisplayed());
+
+    }
 
     public void compareWebElementLists() throws InterruptedException {
-        Thread.sleep(7000);
+        Thread.sleep(8000);
         WaitActions.getWaits().WaitUntilWebElementIsVisible(PartNumberRow);
         System.out.println("size of list :" + PartNumberRow.size());
-        for (int i = 0; i <= PartNumberRow.size(); i++) {
+        for (int i = 0; i <= PartNumberRow.size()-1; i++) {
             String ele = PartNumberRow.get(i).getText();
-            System.out.println("line :" + ele);
+            System.out.println("line1 :" + ele);
+
+
         }
 
     }
     public void compareWebElementLists2() throws InterruptedException {
-        Thread.sleep(7000);
+        Thread.sleep(8000);
         WaitActions.getWaits().WaitUntilWebElementIsVisible(list2);
         System.out.println("size of list :" + list2.size());
         for (int i = 0; i <= list2.size()-1; i++) {
@@ -525,6 +537,8 @@ public class PartResequencing extends TestDriverActions {
                 System.out.println("Elements at index " + i + " and " + (i + 1) );
                 String ele2 = list2.get(i).getText();
                 System.out.println("line :" + ele2);
+
+
             }
         }
     }
@@ -532,8 +546,9 @@ public class PartResequencing extends TestDriverActions {
 
     /*click On Close **/
     public void clickOnClose2() throws InterruptedException {
+
         WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(Close_Btn);
-        WebElementActions.getActions().clickElement(Close_Btn);
+        WebElementActions.getActions().clickUsingJS(Close_Btn);
         WaitActions.getWaits().loadingWait(loder);
 
 
@@ -544,7 +559,7 @@ public class PartResequencing extends TestDriverActions {
      */
     public void clickOnCostProof() throws InterruptedException {
         WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(CostProof);
-        WebElementActions.getActions().clickElement(CostProof);
+        WebElementActions.getActions().clickUsingJS(CostProof);
         WaitActions.getWaits().loadingWait(loder);
     }
 
@@ -787,7 +802,7 @@ public class PartResequencing extends TestDriverActions {
     public void clickOnSignOut() throws InterruptedException {
 
         WaitActions.getWaits().waitForElementToBeRefreshedAndIsVisible(label_SignOut);
-        WebElementActions.getActions().clickUsingJS(label_SignOut);
+        WebElementActions.getActions().clickElement(label_SignOut);
         TestListener.saveScreenshotPNG(driver);
 
     }

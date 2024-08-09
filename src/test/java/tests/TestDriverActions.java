@@ -37,6 +37,7 @@ import pages.tech.EC_Tech_WoParts;
 
 
 import pages.ticket.*;
+import pages.ticket_july.UnitReadingreportisntfilteringbycustomer;
 import tests.ticket.hideshopsuppliesonwoinvoiceparameternotworking;
 import utils.TestListener;
 
@@ -91,7 +92,6 @@ public class TestDriverActions {
     public IssuePartToTech issueparttotech;
     public CounterSaleInvoiceCharacterLimit countersaleinvoicecharacterlimit;
     public Add_a_fabricatedpart_to_a_closed_workorder  addafabricatedparttoaclosedworkorder;
-
     public TransitonedPaccar location;
     public UOMforpressureonInspectionInformation_ALLOWED unitinspectioninformation;
     public OverRideTaxesCauseOtherTaxDisappear overRideTaxes;
@@ -111,9 +111,11 @@ public class TestDriverActions {
    public FixedPMRegularReadingbasedPMSchedules fixedpm;
    public  PartResequencing partresequesencing;
    public TheServiceBoardrefreshesandlosestheusersposition workrequiredpopup;
-
    public  LabelExceptionError caledon;
-
+   public PMInspectionReading  agtfleet;
+   public RentalEquipmentUtilizationParameternotworking triton;
+   public QuantumFinancialExportIsShowingaPSTvalueForInvoices financialexport;
+   public UnitReadingreportisntfilteringbycustomer unitreadingreport;
 
 
 
@@ -336,7 +338,10 @@ public class TestDriverActions {
         partresequesencing=PageFactory.initElements(driver,PartResequencing.class);
         workrequiredpopup=PageFactory.initElements(driver,TheServiceBoardrefreshesandlosestheusersposition.class);
         caledon=PageFactory.initElements(driver,LabelExceptionError.class);
-
+        agtfleet=PageFactory.initElements(driver,PMInspectionReading.class);
+        triton=PageFactory.initElements(driver,RentalEquipmentUtilizationParameternotworking.class);
+        financialexport=PageFactory.initElements(driver,QuantumFinancialExportIsShowingaPSTvalueForInvoices.class);
+        unitreadingreport=PageFactory.initElements(driver,UnitReadingreportisntfilteringbycustomer.class);
 
         loginPage.selectCountryFromDropDown();
 
@@ -589,6 +594,18 @@ public class TestDriverActions {
         else if (getClass().getCanonicalName().contains("Labelexceptionerror")) {
             folderPath = System.getProperty("user.dir") +"/allure-results/Reports/LabelexceptionerrorReports/" + "__" + currentDateTime;
         }
+        else if (getClass().getCanonicalName().contains("PMInspectionReading")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/PMInspectionReadingReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("RentalEquipmentUtilizationParameternotworking")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/RentalEquipmentUtilizationParameternotworkingReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("QuantumFinancialExportIsShowingaPSTvalueForInvoices")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/QuantumFinancialExportIsShowingaPSTvalueForInvoicesReports/" + "__" + currentDateTime;
+        }
+        else if (getClass().getCanonicalName().contains("UnitReadingreportisntfilteringbycustomer")) {
+            folderPath = System.getProperty("user.dir") +"/allure-results/Reports/UnitReadingreportisntfilteringbycustomerReports/" + "__" + currentDateTime;
+        }
 
 
 
@@ -783,6 +800,18 @@ public class TestDriverActions {
             }
             else if (getClass().getCanonicalName().contains("Labelexceptionerror")) {
                 cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\LabelexceptionerrorReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("PMInspectionReading")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\PMInspectionReadingReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("RentalEquipmentUtilizationParameternotworking")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\RentalEquipmentUtilizationParameternotworkingReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("QuantumFinancialExportIsShowingaPSTvalueForInvoices")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\QuantumFinancialExportIsShowingaPSTvalueForInvoicesReports\\" + theDir.getName();
+            }
+            else if (getClass().getCanonicalName().contains("UnitReadingreportisntfilteringbycustomer")) {
+                cmd = allurePathWin + " generate " + " " + System.getProperty("user.dir") + "\\allure-results -o" + " " + System.getProperty("user.dir") + "\\allure-results\\Reports\\UnitReadingreportisntfilteringbycustomerReports\\" + theDir.getName();
             }
 
 

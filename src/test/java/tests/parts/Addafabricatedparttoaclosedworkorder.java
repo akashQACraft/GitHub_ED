@@ -23,21 +23,16 @@ public class Addafabricatedparttoaclosedworkorder extends TestDriverActions {
         addafabricatedparttoaclosedworkorder.typeUnitNumber();
         addafabricatedparttoaclosedworkorder.clickonSelectButton();
         addafabricatedparttoaclosedworkorder.clickOnAddLabour();
-       // addafabricatedparttoaclosedworkorder.clickOnCloseRO();
     }
     @Test(priority = 2, description = "Test_003_type Search Text Area")
     @Description("Test Description: type Search Text Area")
     public void Test_003_typeSearchTextArea()throws InterruptedException, IOException {
-    //    addafabricatedparttoaclosedworkorder.typeSearchTextArea();
-   //     addafabricatedparttoaclosedworkorder.clickonRefresh();
-   //     addafabricatedparttoaclosedworkorder.clickonReferenceNumber();
-   //     addafabricatedparttoaclosedworkorder.clickOnAddLabour2();
         addafabricatedparttoaclosedworkorder.clickOnAddParts();
         addafabricatedparttoaclosedworkorder.verifyPart();
         addafabricatedparttoaclosedworkorder.verifyRoTotalcost();
-        addafabricatedparttoaclosedworkorder.TotalCharge();
+        addafabricatedparttoaclosedworkorder.varifyTotalCharge ();
         addafabricatedparttoaclosedworkorder.clickPartNumber1();
-        addafabricatedparttoaclosedworkorder.PartHash1();
+        addafabricatedparttoaclosedworkorder. varifyOnPartHash1();
         addafabricatedparttoaclosedworkorder.clickonCancelButton ();
     }
     @Test(priority = 3, description = "Test_004_click on Add Part")
@@ -46,11 +41,15 @@ public class Addafabricatedparttoaclosedworkorder extends TestDriverActions {
         addafabricatedparttoaclosedworkorder. clickonAddPart();
         addafabricatedparttoaclosedworkorder. clickonNewPart ();
         addafabricatedparttoaclosedworkorder.verifypartHash ();
+        addafabricatedparttoaclosedworkorder.enterpart ();
         addafabricatedparttoaclosedworkorder.verifypartDescription ();
+        addafabricatedparttoaclosedworkorder.entertheDescription ();
         addafabricatedparttoaclosedworkorder. verifyStockingUOM ();
         addafabricatedparttoaclosedworkorder. verifyStockPart ();
         addafabricatedparttoaclosedworkorder.verifyProductGroupRequired ();
+        addafabricatedparttoaclosedworkorder.selectGroup ();
         addafabricatedparttoaclosedworkorder.verifyCostRequired ();
+        addafabricatedparttoaclosedworkorder. entertheCostTextArea ();
         addafabricatedparttoaclosedworkorder.verifyCostingMethod ();
         addafabricatedparttoaclosedworkorder. verifyGLAccoutGroup ();
         addafabricatedparttoaclosedworkorder. verifyVendor ();
@@ -66,7 +65,7 @@ public class Addafabricatedparttoaclosedworkorder extends TestDriverActions {
         addafabricatedparttoaclosedworkorder. verifyFabricatedParts2();
         addafabricatedparttoaclosedworkorder. verifyPartNumber ();
         addafabricatedparttoaclosedworkorder. verifyFabricatedQuantity ();
-        addafabricatedparttoaclosedworkorder. clickOnCloseButton ();
+       addafabricatedparttoaclosedworkorder. clickOnCloseButton ();
         addafabricatedparttoaclosedworkorder.clickOnSignOut ();
         addafabricatedparttoaclosedworkorder.clickOnUsername ();
 
